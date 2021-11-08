@@ -13,31 +13,34 @@
 //*3. Stampare Nome, cognome, età e codice giocatore.
 //*4. Creare un array di 10 giocatori di basket, con le regole sopra indicate
 //*5. Creare un nuovo array con i giocatori che hanno una media di punti superiore a 35 e la percentuale di successo per i tiri da 3 punti superiore all’80%.
-
+//First name array
+const fistName = ['LeBron','Michael','Shaquille','Kobe','Kareem','Kevin','Magic','Russel','Larry','Scottie','James','Stephen','Chris'];
+//Last name array
+const lastName = ['James','Jordan',"O'Neal",'Bryant','Abdul-Jabbar','Durant','Johnson','Westbrook','Bird','Pippen','Harden','Curry','Paul'];
 //Player team
 //*1.2.3.4.
 const team = [
     {
         idNumber: makeId(6),
-        fistName: 'Mario',
-        lastName: 'Rossi',
-        age: randomNum (18, 50),
+        fistName: randomValue(fistName),
+        lastName: randomValue(lastName),
+        age: randomNum (18, 30),
         pointsPerMatch: randomNum (0, 50),
         rateShotX3: randomNum (0, 50),
     },
     {
         idNumber: makeId(6),
-        fistName: 'Luca',
-        lastName: 'Mozzarella',
-        age: randomNum (18, 50),
+        fistName: randomValue(fistName),
+        lastName: randomValue(lastName),
+        age: randomNum (18, 30),
         pointsPerMatch: randomNum (0, 50),
         rateShotX3: randomNum (0, 100),
     },
     {
         idNumber: makeId(6),
-        fistName: 'Franco',
-        lastName: 'Battiato',
-        age: randomNum (18, 50),
+        fistName: randomValue(fistName),
+        lastName: randomValue(lastName),
+        age: randomNum (18, 30),
         pointsPerMatch: randomNum (0, 50),
         rateShotX3: randomNum (0, 100),
     },
@@ -46,54 +49,54 @@ const team = [
         fistName: 'Paolo',
         lastName: 'Duzioni',
         age: 28,
+        pointsPerMatch: 45,
+        rateShotX3: 99,
+    },
+    {
+        idNumber: makeId(6),
+        fistName: randomValue(fistName),
+        lastName: randomValue(lastName),
+        age: randomNum (18, 30),
         pointsPerMatch: randomNum (0, 50),
         rateShotX3: randomNum (0, 100),
     },
     {
         idNumber: makeId(6),
-        fistName: 'Mattia',
-        lastName: 'Viola',
-        age: randomNum (18, 50),
+        fistName: randomValue(fistName),
+        lastName: randomValue(lastName),
+        age: randomNum (18, 30),
         pointsPerMatch: randomNum (0, 50),
         rateShotX3: randomNum (0, 100),
     },
     {
         idNumber: makeId(6),
-        fistName: 'Tony',
-        lastName: 'Rosa',
-        age: randomNum (18, 50),
+        fistName: randomValue(fistName),
+        lastName: randomValue(lastName),
+        age: randomNum (18, 30),
         pointsPerMatch: randomNum (0, 50),
         rateShotX3: randomNum (0, 100),
     },
     {
         idNumber: makeId(6),
-        fistName: 'Pietro',
-        lastName: 'Neri',
-        age: randomNum (18, 50),
+        fistName: randomValue(fistName),
+        lastName: randomValue(lastName),
+        age: randomNum (18, 30),
         pointsPerMatch: randomNum (0, 50),
         rateShotX3: randomNum (0, 100),
     },
     {
         idNumber: makeId(6),
-        fistName: 'James',
-        lastName: 'Blu',
-        age: randomNum (18, 50),
+        fistName: randomValue(fistName),
+        lastName: randomValue(lastName),
+        age: randomNum (18, 30),
         pointsPerMatch: randomNum (0, 50),
         rateShotX3: randomNum (0, 100),
     },
     {
         idNumber: makeId(6),
-        fistName: 'Lucia',
-        lastName: 'Verdi',
-        age: randomNum (18, 50),
-        pointsPerMatch: randomNum (0, 50),
-        rateShotX3: randomNum (0, 100),
-    },
-    {
-        idNumber: makeId(6),
-        fistName: 'Umberto',
-        lastName: 'Bianchi',
-        age: randomNum (18, 50),
+        fistName: randomValue(fistName),
+        lastName: randomValue(lastName),
+        age: randomNum (18, 30),
         pointsPerMatch: randomNum (0, 50),
         rateShotX3: randomNum (0, 100),
     },
@@ -109,7 +112,7 @@ console.table(topPlayers);
 **FUNCTION**************************************************
 ************************************************************/
 
-//Random resoult
+//Random ID
 function makeId(length) {
     let resoult = '';
 
@@ -124,7 +127,13 @@ function makeId(length) {
     return resoult;
 };
 
+//Random value from array
+function randomValue(arrayRef) {
+    const random = Math.floor(Math.random() * arrayRef.length);
+    return arrayRef[random];
+};
+
 //Random number generator
 function randomNum (min, max) {
     return ( Math.floor( Math.random()* (max - min ) + min ) );
-}
+};
