@@ -22,11 +22,11 @@ const playerCard = {
     idNumber: randomGen (3, letters).concat(randomGen (3, numbers)),
     fistName: 'Mario',
     lastName: 'Rossi',
-    age: '27',
-    pointsPerMatch: '',
-    rateShotX3: '',
+    age: 27,
+    pointsPerMatch: randomNum (0, 50),
+    rateShotX3: randomNum (0, 100),
 };
-console.log(playerCard);
+console.table(playerCard);
 
 
 
@@ -43,5 +43,11 @@ function randomGen (numXGen, source) {
         resoult += source.charAt(Math.floor(Math.random()* source.length));
     }
 
+    return resoult;
+}
+
+//Random number generator
+function randomNum (min, max) {
+    let resoult= ( Math.floor( Math.random()*( max-min ) +1 )-min );
     return resoult;
 }
