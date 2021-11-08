@@ -19,7 +19,7 @@ const numbers = '0123456789';
 
 //*1.
 const playerCard = {
-    idNumber: randomGen (3, letters).concat(randomGen (3, numbers)),
+    idNumber: makeId(6),
     fistName: 'Mario',
     lastName: 'Rossi',
     age: 27,
@@ -36,15 +36,19 @@ console.table(playerCard);
 ************************************************************/
 
 //Random resoult
-function randomGen (numXGen, source) {
-    let resoult= '';
+function makeId(length) {
+    let resoult = '';
 
-    for (let i=0; i<numXGen; i++) {
-        resoult += source.charAt(Math.floor(Math.random()* source.length));
+    const letters = 'ABCDEFGHILMNOPQRSUTVZ';
+    const numbers = '0123456789';
+
+    for (let i=0; i < length/2; i++) {
+        resoult += letters.charAt(Math. floor(Math. random() * letters. length));
+        resoult += numbers.charAt(Math. floor(Math. random() * numbers. length));
     }
 
     return resoult;
-}
+};
 
 //Random number generator
 function randomNum (min, max) {
