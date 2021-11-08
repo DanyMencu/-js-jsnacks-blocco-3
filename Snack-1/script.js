@@ -18,21 +18,95 @@ const numbers = '0123456789';
 
 
 //*1.
-const playerCard = {
-    idNumber: makeId(6),
-    fistName: 'Mario',
-    lastName: 'Rossi',
-    age: 27,
-    pointsPerMatch: randomNum (0, 50),
-    rateShotX3: randomNum (0, 100),
-};
+const playerCard = [
+    {
+        idNumber: makeId(6),
+        fistName: 'Mario',
+        lastName: 'Rossi',
+        age: randomNum (18, 50),
+        pointsPerMatch: randomNum (0, 50),
+        rateShotX3: randomNum (0, 100),
+    },
+    {
+        idNumber: makeId(6),
+        fistName: 'Luca',
+        lastName: 'Mozzarella',
+        age: randomNum (18, 50),
+        pointsPerMatch: randomNum (0, 50),
+        rateShotX3: randomNum (0, 100),
+    },
+    {
+        idNumber: makeId(6),
+        fistName: 'Franco',
+        lastName: 'Battiato',
+        age: randomNum (18, 50),
+        pointsPerMatch: randomNum (0, 50),
+        rateShotX3: randomNum (0, 100),
+    },
+    {
+        idNumber: makeId(6),
+        fistName: 'Paolo',
+        lastName: 'Duzioni',
+        age: 28,
+        pointsPerMatch: randomNum (0, 50),
+        rateShotX3: randomNum (0, 100),
+    },
+    {
+        idNumber: makeId(6),
+        fistName: 'Mattia',
+        lastName: 'Viola',
+        age: randomNum (18, 50),
+        pointsPerMatch: randomNum (0, 50),
+        rateShotX3: randomNum (0, 100),
+    },
+    {
+        idNumber: makeId(6),
+        fistName: 'Tony',
+        lastName: 'Rosa',
+        age: randomNum (18, 50),
+        pointsPerMatch: randomNum (0, 50),
+        rateShotX3: randomNum (0, 100),
+    },
+    {
+        idNumber: makeId(6),
+        fistName: 'Pietro',
+        lastName: 'Neri',
+        age: randomNum (18, 50),
+        pointsPerMatch: randomNum (0, 50),
+        rateShotX3: randomNum (0, 100),
+    },
+    {
+        idNumber: makeId(6),
+        fistName: 'James',
+        lastName: 'Blu',
+        age: randomNum (18, 50),
+        pointsPerMatch: randomNum (0, 50),
+        rateShotX3: randomNum (0, 100),
+    },
+    {
+        idNumber: makeId(6),
+        fistName: 'Lucia',
+        lastName: 'Verdi',
+        age: randomNum (18, 50),
+        pointsPerMatch: randomNum (0, 50),
+        rateShotX3: randomNum (0, 100),
+    },
+    {
+        idNumber: makeId(6),
+        fistName: 'Umberto',
+        lastName: 'Bianchi',
+        age: randomNum (18, 50),
+        pointsPerMatch: randomNum (0, 50),
+        rateShotX3: randomNum (0, 100),
+    },
+]
 console.table(playerCard);
 
 
 
 
 /***********************************************************
- * *FUNCTION
+**FUNCTION**************************************************
 ************************************************************/
 
 //Random resoult
@@ -52,6 +126,5 @@ function makeId(length) {
 
 //Random number generator
 function randomNum (min, max) {
-    let resoult= ( Math.floor( Math.random()*( max-min ) +1 )-min );
-    return resoult;
+    return ( Math.floor( Math.random()* (max - min ) + min ) );
 }
