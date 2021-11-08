@@ -13,10 +13,12 @@
 //*3. Stampare Nome, cognome, età e codice giocatore.
 //*4. Creare un array di 10 giocatori di basket, con le regole sopra indicate
 //*5. Creare un nuovo array con i giocatori che hanno una media di punti superiore a 35 e la percentuale di successo per i tiri da 3 punti superiore all’80%.
+
 //First name array
 const fistName = ['LeBron','Michael','Shaquille','Kobe','Kareem','Kevin','Magic','Russel','Larry','Scottie','James','Stephen','Chris'];
 //Last name array
 const lastName = ['James','Jordan',"O'Neal",'Bryant','Abdul-Jabbar','Durant','Johnson','Westbrook','Bird','Pippen','Harden','Curry','Paul'];
+
 //Player team
 //*1.2.3.4.
 const team = [
