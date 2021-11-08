@@ -22,8 +22,8 @@ const team = [
         fistName: 'Mario',
         lastName: 'Rossi',
         age: randomNum (18, 50),
-        pointsPerMatch: 40,
-        rateShotX3: 90,
+        pointsPerMatch: randomNum (0, 50),
+        rateShotX3: randomNum (0, 50),
     },
     {
         idNumber: makeId(6),
