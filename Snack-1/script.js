@@ -13,19 +13,17 @@
 //*3. Stampare Nome, cognome, età e codice giocatore.
 //*4. Creare un array di 10 giocatori di basket, con le regole sopra indicate
 //*5. Creare un nuovo array con i giocatori che hanno una media di punti superiore a 35 e la percentuale di successo per i tiri da 3 punti superiore all’80%.
-const letters = 'ABCDEFGHILMNOPQRSUTVZ';
-const numbers = '0123456789';
 
-
-//*1.
-const playerCard = [
+//Player team
+//*1.2.3.4.
+const team = [
     {
         idNumber: makeId(6),
         fistName: 'Mario',
         lastName: 'Rossi',
         age: randomNum (18, 50),
-        pointsPerMatch: randomNum (0, 50),
-        rateShotX3: randomNum (0, 100),
+        pointsPerMatch: 40,
+        rateShotX3: 90,
     },
     {
         idNumber: makeId(6),
@@ -100,10 +98,12 @@ const playerCard = [
         rateShotX3: randomNum (0, 100),
     },
 ]
-console.table(playerCard);
+console.table(team);
 
-
-
+//Filter the top player with super statistics
+//*5.
+const topPlayers = team.filter( team => team.pointsPerMatch >= 35 && team.rateShotX3 >= 80);
+console.table(topPlayers);
 
 /***********************************************************
 **FUNCTION**************************************************
