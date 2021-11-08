@@ -13,3 +13,35 @@
 //*3. Stampare Nome, cognome, età e codice giocatore.
 //*4. Creare un array di 10 giocatori di basket, con le regole sopra indicate
 //*5. Creare un nuovo array con i giocatori che hanno una media di punti superiore a 35 e la percentuale di successo per i tiri da 3 punti superiore all’80%.
+const letters = 'ABCDEFGHILMNOPQRSUTVZ';
+const numbers = '0123456789';
+
+
+//*1.
+const playerCard = {
+    idNumber: randomGen (3, letters).concat(randomGen (3, numbers)),
+    fistName: 'Mario',
+    lastName: 'Rossi',
+    age: '27',
+    pointsPerMatch: '',
+    rateShotX3: '',
+};
+console.log(playerCard);
+
+
+
+
+/***********************************************************
+ * *FUNCTION
+************************************************************/
+
+//Random resoult
+function randomGen (numXGen, source) {
+    let resoult= '';
+
+    for (let i=0; i<numXGen; i++) {
+        resoult += source.charAt(Math.floor(Math.random()* source.length));
+    }
+
+    return resoult;
+}
