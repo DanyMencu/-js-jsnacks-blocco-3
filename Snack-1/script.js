@@ -107,7 +107,7 @@ console.table(team);
 
 //Filter the top player with super statistics
 //*5.
-const topPlayers = team.filter( team => team.pointsPerMatch >= 35 && team.rateShotX3 >= 80);
+const topPlayers = team.filter( player => player.pointsPerMatch > 35 && player.rateShotX3 > 80);
 console.table(topPlayers);
 
 /***********************************************************
@@ -115,15 +115,14 @@ console.table(topPlayers);
 ************************************************************/
 
 //Random ID
-function makeId(length) {
+function makeId() {
     let resoult = '';
 
     const letters = 'ABCDEFGHILMNOPQRSUTVZ';
-    const numbers = '0123456789';
 
-    for (let i=0; i < length/2; i++) {
-        resoult += letters.charAt(Math. floor(Math. random() * letters. length));
-        resoult += numbers.charAt(Math. floor(Math. random() * numbers. length));
+    for (let i=0; i < 3; i++) {
+        resoult += letters.charAt(randomNum (0, letters.length));
+        resoult += randomNum (0, 9);
     }
 
     return resoult;
@@ -137,5 +136,5 @@ function randomValue(arrayRef) {
 
 //Random number generator
 function randomNum (min, max) {
-    return ( Math.floor( Math.random()* (max - min ) + min ) );
+    return ( Math.floor( Math.random()* (max - min + 1 ) + min ) );
 };
